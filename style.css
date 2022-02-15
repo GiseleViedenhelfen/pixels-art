@@ -9,5 +9,11 @@ ul li:nth-child(3){background-color: blue;}
 ul li:last-child{background-color: red;}
 
 .pixel{
-    background-color: white;
+    background-color: white;   
+    height: 40px;  
+    width: 40px; 
+    border: black solid 1px;
+    padding: 0;
 }
+
+

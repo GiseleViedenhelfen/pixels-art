@@ -1,5 +1,6 @@
  //código inspirado na resolução do exercício parte II do 5.3 js
  //https://app.betrybe.com/course/fundamentals/javascript-dom-eventos-e-web-storage/javascript-eventos-gabarito/solutions/700128ff-5150-4320-9b33-875c7e6d5a2e/gabarito-dos-exercicios/b1d700e5-2b66-48c3-8af0-310cb17eacda?use_case=calendar
+//requisito 7
  function cliqueCor(event){
      const cores = document.querySelector('.selected');
      cores.classList.remove('selected');
@@ -21,10 +22,31 @@ azul.addEventListener('click', cliqueCor)
 
 vermelho.addEventListener('click', cliqueCor)
 
-let corSelecionada = document.querySelectorAll('.selected')
 
+// requisito 8
+window.onload = function(){
+    let classeSelecionada = document.getElementsByClassName('color selected')[0]
+    let cor = classeSelecionada.innerText
+    let quadradinhos= document.getElementsByClassName('pixel')
+    for(index=0; index<quadradinhos.length;index+=1){
+       
+        let quadradoDaVez = quadradinhos[index]
+        quadradoDaVez.addEventListener('click', function(event){
+            quadradoDaVez.style.backgroundColor= cor
+        })
+    }
+}
+
+
+
+
+//requisito 9
 const botaoReset= document.getElementById('clear-board')
 botaoReset.addEventListener('click', function(event){
     let pixelAPintar = document.getElementsByClassName('pixel');
-    pixelAPintar.style.backgroundColor = 'white'
+    
+    for(let index =0; index < pixelAPintar.length; index+=1){
+        pixelAPintar[index].style.backgroundColor = 'white'
+    }
+ 
 })

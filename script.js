@@ -1,7 +1,23 @@
- //código inspirado na resolução do exercício parte II do 5.3 js
+ //criar tabela
+ const encontrarSecao = document.querySelector('#pixel-board')
+ let colunas = 5
+ let linhas = colunas
+ for(let index=0; index< colunas; index+=1){
+   let colunaPixel = document.createElement('div') 
+   colunaPixel.className = ' coluna'
+   encontrarSecao.appendChild(colunaPixel)
+   for(let novoIndex=0; novoIndex < linhas;novoIndex+=1){
+    let colunaPixel = document.createElement('div') 
+   encontrarSecao.appendChild(colunaPixel)
+    colunaPixel.className = 'pixel linha'
+   }
+ }
+ //
+ 
+//código inspirado na resolução do exercício parte II do 5.3 js
  //https://app.betrybe.com/course/fundamentals/javascript-dom-eventos-e-web-storage/javascript-eventos-gabarito/solutions/700128ff-5150-4320-9b33-875c7e6d5a2e/gabarito-dos-exercicios/b1d700e5-2b66-48c3-8af0-310cb17eacda?use_case=calendar
 //requisito 7
-let classeSelecionada = 'green'
+
 function cliqueCor(event){
      const cores = document.querySelector('.selected');
      cores.classList.remove('selected');

@@ -2,12 +2,19 @@
     border: black solid 1px;
     list-style: none;
     display: inline-block;
+    width: 43px;
+    height: 20px;
+    text-align: center;
+    margin-right: 5px ;
+   
 }
-ul li:first-child{background-color: black;}
+ul li:first-child{background-color: black; color: white;}
 ul li:nth-child(2){background-color: pink;}
-ul li:nth-child(3){background-color: blue;}
+ul li:nth-child(3){background-color: blue; color: white;}
 ul li:last-child{background-color: red;}
-
+ul{
+   padding-left: 2px;
+}
 .pixel{
     background-color: white;   
     height: 40px;  
@@ -15,4 +22,15 @@ ul li:last-child{background-color: red;}
     border: black solid 1px;
     padding: 0;
 }
+.linha{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.coluna{
+    display: block;
+}
+#clear-board{
+    margin-bottom: 10px;
 
+}
